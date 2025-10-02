@@ -1,0 +1,14 @@
+
+<table class="w-100">
+    <tr>
+        <td><h3>To Do:</h3></td>
+    </tr>
+    <tr *ngFor = "let task of tasks">
+        <td>
+            <div class="d-flex justify-content-between">
+                <h5 class="fw-normal" [class.completed]="task.completed">{{task.taskName}}</h5>
+                <input type="checkbox" name="" id="" [(ngModel)] = "task.completed">
+            </div>
+        </td>
+    </tr>
+</table>

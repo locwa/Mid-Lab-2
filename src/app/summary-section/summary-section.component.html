@@ -1,0 +1,5 @@
+<div class="w-100 mt-4">
+    <h6 *ngIf = "taskNumber == 0" class="text-center">There are no tasks</h6>
+    <h6 *ngIf = "taskNumber == 1" class="text-center">There is {{taskNumber}} task</h6>
+    <h6 *ngIf = "taskNumber > 1" class="text-center">There are {{taskNumber}} tasks</h6>
+</div>
