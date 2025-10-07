@@ -7,10 +7,7 @@
         <td>
             <div class="d-flex justify-content-between">
                 <h5 class="fw-normal" [class.completed]="task.completed">{{task.taskName}}</h5>
-                <div class="d-flex gap-4">
-                    <input type="checkbox" name="" id="" [(ngModel)] = "task.completed" (click)="updateTasks(task.taskId)">
-                    <button class="btn btn-danger" (click)="deleteTask(task.taskId)">Delete</button>
-                </div>
+                <input type="checkbox" name="" id="" [(ngModel)] = "task.completed">
             </div>
         </td>
     </tr>

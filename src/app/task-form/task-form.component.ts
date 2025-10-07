@@ -4,16 +4,20 @@ import { FormsModule } from '@angular/forms';
 import { TaskServiceService } from '../services/task-service.service'
 
 @Component({
-  selector: 'app-summary-section',
+  selector: 'app-task-form',
   imports: [CommonModule, FormsModule],
-  templateUrl: './summary-section.component.html',
-  styleUrl: './summary-section.component.css'
+  templateUrl: './task-form.component.html',
+  styleUrl: './task-form.component.css'
 })
-export class SummarySectionComponent {
+export class TaskFormComponent {
+  taskName = ""
 
   constructor(private functions: TaskServiceService){}
 
-  get taskNumber(){
-    return this.functions.getTasksTotal()
+  addTask() {
+    if (this.taskName !== ""){
+      this.functions.addTask(this.taskName)
+      this.taskName = ""
+    }
   }
 }
