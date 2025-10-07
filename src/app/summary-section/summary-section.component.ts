@@ -16,4 +16,15 @@ export class SummarySectionComponent {
   get taskNumber(){
     return this.functions.getTasksTotal()
   }
+
+  get taskCompletedNumber(){
+    return this.functions.getTotalTasksCompleted()
+  }
+
+  get remainingTaskNumber() {
+    let totalTasks = this.functions.getTasksTotal()
+    let completedTasks = this.functions.getTotalTasksCompleted()
+    return totalTasks - completedTasks
+  }
+
 }

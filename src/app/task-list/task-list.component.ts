@@ -11,7 +11,6 @@ import { TaskServiceService } from '../services/task-service.service'
 })
 export class TaskListComponent {
   tasks:any = []
-  isTaskComplete = false
 
   constructor(private functions: TaskServiceService){}
   
@@ -19,7 +18,13 @@ export class TaskListComponent {
     this.tasks = this.functions.getTasks()
   }
   
-  checkIsTaskComplete() {
-    console.log(this.isTaskComplete)
+  updateTasks(id : any){
+    this.functions.changeTaskCompletedStatus(id)
+    this.tasks = this.functions.getTasks()
+  }
+
+  deleteTask(id : any){
+    this.functions.deleteTask(id)
+    this.tasks = this.functions.getTasks()
   }
 }

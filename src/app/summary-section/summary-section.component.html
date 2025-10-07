@@ -1,5 +1,17 @@
 <div class="w-100 mt-4">
     <h6 *ngIf = "taskNumber == 0" class="text-center">There are no tasks</h6>
-    <h6 *ngIf = "taskNumber == 1" class="text-center">There is {{taskNumber}} task</h6>
-    <h6 *ngIf = "taskNumber > 1" class="text-center">There are {{taskNumber}} tasks</h6>
+    <h6 *ngIf = "taskNumber == 1" class="text-center">There is a total of {{taskNumber}} task</h6>
+    <h6 *ngIf = "taskNumber > 1" class="text-center">There are a total of {{taskNumber}} tasks</h6>
+</div>
+
+<div class="w-100 mt-4">
+    <h6 *ngIf = "taskCompletedNumber == 0" class="text-center">There are no completed tasks</h6>
+    <h6 *ngIf = "taskCompletedNumber == 1" class="text-center">There is {{taskCompletedNumber}} completed task</h6>
+    <h6 *ngIf = "taskCompletedNumber > 1" class="text-center">There are {{taskCompletedNumber}} completed tasks</h6>
+</div>
+
+<div class="w-100 mt-4">
+    <h6 *ngIf = "remainingTaskNumber == 0" class="text-center">There are no remaining tasks</h6>
+    <h6 *ngIf = "remainingTaskNumber == 1" class="text-center">There is {{remainingTaskNumber}} remaining task</h6>
+    <h6 *ngIf = "remainingTaskNumber > 1" class="text-center">There are {{remainingTaskNumber}} remaining tasks</h6>
 </div>
