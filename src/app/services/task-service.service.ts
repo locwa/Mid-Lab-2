@@ -33,8 +33,7 @@ export class TaskServiceService {
   changeTaskCompletedStatus(id: number) {
     this.tasks.forEach((task : any) => {
       if (task.taskId == id){
-        task.taskCompleted = !task.taskCompleted
-        console.log(task.taskCompleted)
+        task.taskCompleted = !task.taskCompleted)
       }
     });
   }
